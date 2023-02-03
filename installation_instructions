@@ -1,0 +1,82 @@
+INSTALLATION COMMANDS:
+
+(1) Ibex (version 2.8.9) installation commands
+	Requirements
+		- sudo apt-get install -y python2.7 flex bison gcc g++ make pkg-config
+	If you do not have python2 installed:
+   		- sudo apt update
+   		- sudo apt install python-is-python3
+   - cd /home/username (username is your profile directory, in my case username = bernardo)
+   - mkdir Ibex
+   - ~/Ibex/$ tar xvfz ibex-2.8.9.tar.gz
+   - ~/Ibex/$ cd ibex-2.8.9
+   - ~/Ibex/ibex-2.8.8/$ ./waf configure --lp-lib=soplex
+   - ~/Ibex/ibex-2.8.8/$ sudo ./waf install
+
+
+   To test IBEX working:
+   	- ~/Ibex/ibex-2.8.9/$ cd examples
+   	- ~/Ibex/ibex-2.8.9/$ make lab1
+   	- ~/Ibex/ibex-2.8.9/$ ./lab1
+   	
+(2) Download source code of jsoncpp in https://github.com/open-source-parsers/jsoncpp and place it on 'Documents' directory
+	Execute
+		- rename jsoncpp-master to jsoncpp
+		- ~/Documents/$ cd jsoncpp
+		- ~/Documents/jsoncpp$ python amalgamate.py
+
+(3) Install lark:
+
+	Requirements
+       	- Have python3 installed
+	Execute
+		- python3 -m pip install lark
+		- python3 -m pip install regex
+		
+(4) Install Pygame
+	
+	Requirements
+		- Have python3 installed
+	Execute
+		- python3 -m pip install pygame
+	
+(5) Install numpy
+
+	Requirements
+		- Have python3 installed
+	Execute
+		- python3 -m pip install numpy
+
+
+CHANGES ON FILES:
+
+File makefile:
+	- Change the directory on lines 5 and 6 to the directory where you have your jsoncpp code, according with the same directories "/jsoncpp/include" and "jsoncpp/include/json" for lines 5 and 6, 	respectively.
+
+(1) File "solution.py":
+	-  change the value of the variable "origin_dir" on line 40 to "/home/		
+	   username/", which is the directory where you have Ibex (mine is "/home/bernardo/").
+
+(2) File "language_gen.py":
+	- change the value of the variable "origin_dir" on line 15 to the directory where you have Ibex 
+	  (mine is "/home/bernardo/")
+
+(3) File "ConsoleApplication.cpp":
+	- change the value of the variable "ORIGIN_DIR" on line 29 to the directory where you have Ibex 
+	  (mine is "/home/bernardo/")
+	  
+(4) To create a new scenario:
+	- Access the file "example.dsl" on the directory "/Ibex/ibex-2.8.9/examples/ConsoleApplication1/ConsoleApplication1"
+	- Perform the changes according to the syntax	  
+	  
+(5) To create new road networks:
+	- Access the directory "Ibex/ibex-2.8.9/examples/ConsoleApplication1/ConsoleApplication1/roadNetworks"
+	- Create a file with the road network identifier as the name of the file ("id.json", with id being a numerical identifier of the road network), identifier will be the number used in the dsl 			program
+	- Follow the syntax defined as in the other files for creating the road network
+	
+To run the software:
+	- cd /Ibex/ibex-2.8.9/examples/ConsoleApplication1/ConsoleApplication1
+	- bash run_linux.sh
+
+
+
