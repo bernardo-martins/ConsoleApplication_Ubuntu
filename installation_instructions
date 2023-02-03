@@ -74,9 +74,13 @@ File makefile:
 	- Create a file with the road network identifier as the name of the file ("id.json", with id being a numerical identifier of the road network), identifier will be the number used in the dsl 			program
 	- Follow the syntax defined as in the other files for creating the road network
 	
-To run the software:
+TO RUN THE PROGRAM:
 	- cd /Ibex/ibex-2.8.9/examples/ConsoleApplication1/ConsoleApplication1
 	- bash run_linux.sh
+	
+TO EDIT THE RUNNING PARAMETERS
+	- open the file "run_linux.sh"
+	- change the parameters on line 13 (1st parameters: eps, 2nd parameter: nSolutions, 3rd parameter: limitTimesRun, 4th parameter: limitTimeRun)
 
 
 
