@@ -50,26 +50,26 @@ INSTALLATION COMMANDS:
 
 CHANGES ON FILES:
 
-File makefile:
+(1) File makefile:
 	- Change the directory on lines 5 and 6 to the directory where you have your jsoncpp code, according with the same directories "/jsoncpp/include" and "jsoncpp/include/json" for lines 5 and 6, 	respectively.
 
-(1) File "solution.py":
+(2) File "solution.py":
 	-  change the value of the variable "origin_dir" on line 40 to "/home/		
 	   username/", which is the directory where you have Ibex (mine is "/home/bernardo/").
 
-(2) File "language_gen.py":
+(3) File "language_gen.py":
 	- change the value of the variable "origin_dir" on line 15 to the directory where you have Ibex 
 	  (mine is "/home/bernardo/")
 
-(3) File "ConsoleApplication.cpp":
+(4) File "ConsoleApplication.cpp":
 	- change the value of the variable "ORIGIN_DIR" on line 29 to the directory where you have Ibex 
 	  (mine is "/home/bernardo/")
 	  
-(4) To create a new scenario:
+(5) To create a new scenario:
 	- Access the file "example.dsl" on the directory "/Ibex/ibex-2.8.9/examples/ConsoleApplication1/ConsoleApplication1"
 	- Perform the changes according to the syntax	  
 	  
-(5) To create new road networks:
+(6) To create new road networks:
 	- Access the directory "Ibex/ibex-2.8.9/examples/ConsoleApplication1/ConsoleApplication1/roadNetworks"
 	- Create a file with the road network identifier as the name of the file ("id.json", with id being a numerical identifier of the road network), identifier will be the number used in the dsl 			program
 	- Follow the syntax defined as in the other files for creating the road network
